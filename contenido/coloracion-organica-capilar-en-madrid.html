@@ -110,26 +110,88 @@
 <p>Así evitamos una elección genérica y adaptamos el color a tu tono, tu estilo y el mantenimiento que quieres llevar.</p>
 
 
-<!-- ===== BLOQUE 8 · NUEVO · Tabla comparativa · Widget HTML ===== -->
+<!-- ===== BLOQUE 8 · NUEVO · Tabla comparativa · Widget HTML (pegar todo, incluido <style>). Responsiva: en móvil se convierte en tarjetas ===== -->
+<style>
+.dim-tabla-wrap{margin:0 auto;max-width:1100px}
+.dim-tabla{width:100%;border-collapse:separate;border-spacing:0;text-align:left;font-size:15px;line-height:1.5;color:#000;background:#FFFFFF;border:1px solid #DDDDDD;border-radius:12px;overflow:hidden}
+.dim-tabla th,.dim-tabla td{padding:14px 16px;border-bottom:1px solid #DDDDDD;vertical-align:middle}
+.dim-tabla thead th{background:#000000;color:#FFFFFF;font-weight:700;text-transform:uppercase;letter-spacing:.5px;font-size:14px}
+.dim-tabla thead th.dim-col{border-top:4px solid #007CBA}
+.dim-tabla thead th.trad-col{border-top:4px solid #CC1818}
+.dim-tabla tbody th{font-weight:700;background:#FFFFFF;width:22%}
+.dim-tabla tbody tr:nth-child(even) th,.dim-tabla tbody tr:nth-child(even) td{background:rgba(221,221,221,.35)}
+.dim-tabla td.dim-col{color:#000}
+.dim-tabla tbody tr:last-child th,.dim-tabla tbody tr:last-child td{border-bottom:0}
+.dim-ok{color:#007CBA;font-weight:700}
+.dim-ok::before{content:"✓ "}
+.dim-ko{color:#CC1818;font-weight:700}
+.dim-ko::before{content:"✕ "}
+.dim-precio{color:#3858E9;font-weight:700}
+@media (max-width:767px){
+  .dim-tabla,.dim-tabla thead,.dim-tabla tbody,.dim-tabla tr,.dim-tabla th,.dim-tabla td{display:block;width:100%;box-sizing:border-box}
+  .dim-tabla{border:0;border-radius:0;background:transparent}
+  .dim-tabla thead{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+  .dim-tabla tbody tr{margin-bottom:16px;border:1px solid #DDDDDD;border-radius:12px;overflow:hidden;background:#FFFFFF}
+  .dim-tabla tbody th{background:#000000 !important;color:#FFFFFF;width:100%;border-bottom:0}
+  .dim-tabla tbody td{display:flex;justify-content:space-between;gap:12px;background:#FFFFFF !important;text-align:right}
+  .dim-tabla tbody td::before{content:attr(data-label);font-weight:700;text-align:left;color:#000}
+  .dim-tabla tbody tr:last-child td{border-bottom:1px solid #DDDDDD}
+  .dim-tabla tbody td:last-child{border-bottom:0}
+}
+</style>
+
 <h2>Coloración orgánica frente a tinte tradicional</h2>
-<table style="width:100%;border-collapse:collapse;text-align:left">
+
+<div class="dim-tabla-wrap">
+<table class="dim-tabla">
   <thead>
     <tr>
-      <th style="border-bottom:1px solid #000;padding:8px"></th>
-      <th style="border-bottom:1px solid #000;padding:8px">Barros vegetales</th>
-      <th style="border-bottom:1px solid #000;padding:8px">DIM Néctar Color</th>
-      <th style="border-bottom:1px solid #000;padding:8px">Tinte tradicional</th>
+      <th scope="col"><span style="position:absolute;left:-9999px">Característica</span></th>
+      <th scope="col" class="dim-col">Barros vegetales</th>
+      <th scope="col" class="dim-col">DIM Néctar Color</th>
+      <th scope="col" class="trad-col">Tinte tradicional</th>
     </tr>
   </thead>
   <tbody>
-    <tr><td style="padding:8px"><strong>Amoniaco / PPD</strong></td><td style="padding:8px">No</td><td style="padding:8px">No</td><td style="padding:8px">Normalmente sí</td></tr>
-    <tr><td style="padding:8px"><strong>Cómo actúa</strong></td><td style="padding:8px">Envuelve la fibra</td><td style="padding:8px">Deposita color y reestructura</td><td style="padding:8px">Abre la cutícula</td></tr>
-    <tr><td style="padding:8px"><strong>Canas</strong></td><td style="padding:8px">Camufla con reflejos</td><td style="padding:8px">Cobertura total</td><td style="padding:8px">Cobertura total</td></tr>
-    <tr><td style="padding:8px"><strong>Duración del color</strong></td><td style="padding:8px">6–8 semanas</td><td style="padding:8px">6–8 semanas</td><td style="padding:8px">6–8 semanas</td></tr>
-    <tr><td style="padding:8px"><strong>Vegano</strong></td><td style="padding:8px">Sí</td><td style="padding:8px">Sí</td><td style="padding:8px">No siempre</td></tr>
-    <tr><td style="padding:8px"><strong>Precio en DIM Salón</strong></td><td style="padding:8px">Desde 80 €</td><td style="padding:8px">Desde 58 €</td><td style="padding:8px">—</td></tr>
+    <tr>
+      <th scope="row">Amoniaco / PPD</th>
+      <td data-label="Barros vegetales"><span class="dim-ok">No</span></td>
+      <td data-label="DIM Néctar Color"><span class="dim-ok">No</span></td>
+      <td data-label="Tinte tradicional"><span class="dim-ko">Normalmente sí</span></td>
+    </tr>
+    <tr>
+      <th scope="row">Cómo actúa</th>
+      <td data-label="Barros vegetales">Envuelve la fibra</td>
+      <td data-label="DIM Néctar Color">Deposita color y reestructura</td>
+      <td data-label="Tinte tradicional">Abre la cutícula</td>
+    </tr>
+    <tr>
+      <th scope="row">Canas</th>
+      <td data-label="Barros vegetales">Camufla con reflejos</td>
+      <td data-label="DIM Néctar Color">Cobertura total</td>
+      <td data-label="Tinte tradicional">Cobertura total</td>
+    </tr>
+    <tr>
+      <th scope="row">Duración del color</th>
+      <td data-label="Barros vegetales">6–8 semanas</td>
+      <td data-label="DIM Néctar Color">6–8 semanas</td>
+      <td data-label="Tinte tradicional">6–8 semanas</td>
+    </tr>
+    <tr>
+      <th scope="row">Vegano</th>
+      <td data-label="Barros vegetales"><span class="dim-ok">Sí</span></td>
+      <td data-label="DIM Néctar Color"><span class="dim-ok">Sí</span></td>
+      <td data-label="Tinte tradicional"><span class="dim-ko">No siempre</span></td>
+    </tr>
+    <tr>
+      <th scope="row">Precio en DIM Salón</th>
+      <td data-label="Barros vegetales"><span class="dim-precio">Desde 80 €</span></td>
+      <td data-label="DIM Néctar Color"><span class="dim-precio">Desde 58 €</span></td>
+      <td data-label="Tinte tradicional">—</td>
+    </tr>
   </tbody>
 </table>
+</div>
 
 
 <!-- ===== BLOQUE 9 · Beneficios · Título (H2) + Lista de iconos ===== -->
