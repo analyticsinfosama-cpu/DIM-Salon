@@ -269,11 +269,12 @@
 .dim-contacto li:last-child{border-bottom:0}
 .dim-contacto .dim-ico{flex:0 0 40px;width:40px;height:40px;border-radius:50%;background:#007CBA;display:flex;align-items:center;justify-content:center}
 .dim-contacto .dim-ico svg{width:20px;height:20px;fill:none;stroke:#FFFFFF;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
-.dim-contacto .dim-txt{padding-top:8px}
+.dim-contacto .dim-txt{padding-top:8px;min-width:0;overflow-wrap:anywhere}
 .dim-contacto .dim-txt strong{display:block;font-size:13px;text-transform:uppercase;letter-spacing:.5px;color:#007CBA;margin-bottom:2px}
 .dim-contacto a{color:#000000 !important;text-decoration:none !important;border-bottom:1px solid #DDDDDD}
 .dim-contacto a:hover{color:#3858E9 !important;border-bottom-color:#3858E9}
-@media (max-width:767px){.dim-contacto{font-size:15px}}
+@media (max-width:1024px){.dim-contacto{font-size:15px}.dim-contacto li{gap:12px;padding:12px 0}}
+@media (max-width:767px){.dim-contacto .dim-ico{flex-basis:36px;width:36px;height:36px}.dim-contacto .dim-ico svg{width:18px;height:18px}.dim-contacto .dim-txt{padding-top:6px}}
 </style>
 
 <ul class="dim-contacto">
