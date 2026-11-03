@@ -1,0 +1,165 @@
+<!--
+ SCHEMA · /tratamiento-coloracion-con-barros-naturales/
+ Pegar en un widget HTML (al final de la página). Revisar antes:
+ - geo: poner las MISMAS coordenadas que en Rank Math > SEO local.
+ - FAQPage: el texto debe coincidir con el acordeón. Si activas "FAQ Schema" en el acordeón, BORRA el bloque FAQPage de aquí.
+ - Si más adelante se activa el schema de Rank Math en esta página, quitar el bloque HairSalon para no duplicarlo.
+-->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "HairSalon",
+      "@id": "https://dimsalon.es/#organization",
+      "name": "DIM Salón",
+      "url": "https://dimsalon.es/",
+      "logo": "https://dimsalon.es/wp-content/uploads/2020/12/Logo-DIM-Salon.png",
+      "image": "https://dimsalon.es/wp-content/uploads/2020/12/Logo-DIM-Salon.png",
+      "telephone": "+34919336249",
+      "email": "info@dimsalon.es",
+      "priceRange": "€€",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "C. de Manuela Malasaña, 19",
+        "addressLocality": "Madrid",
+        "postalCode": "28004",
+        "addressRegion": "Comunidad de Madrid",
+        "addressCountry": "ES"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 40.4286274,
+        "longitude": -3.704413
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Tuesday",
+            "Friday"
+          ],
+          "opens": "10:30",
+          "closes": "20:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Wednesday",
+            "Thursday"
+          ],
+          "opens": "10:30",
+          "closes": "19:30"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "Saturday",
+          "opens": "09:30",
+          "closes": "14:00"
+        }
+      ],
+      "sameAs": [
+        "https://www.facebook.com/Dim-Salon-623936648239742",
+        "https://www.instagram.com/dimsalon_es/",
+        "https://www.tiktok.com/@dimsalon_es"
+      ]
+    },
+    {
+      "@type": "Service",
+      "@id": "https://dimsalon.es/tratamiento-coloracion-con-barros-naturales/#service",
+      "name": "Coloración con barros",
+      "serviceType": "Coloración con barros para canas",
+      "description": "Coloración con barros artesanos de color en Malasaña (Madrid) para camuflar e integrar las canas con reflejos naturales, sin amoniaco. Incluye diagnóstico personalizado.",
+      "provider": {
+        "@id": "https://dimsalon.es/#organization"
+      },
+      "areaServed": {
+        "@type": "City",
+        "name": "Madrid"
+      },
+      "url": "https://dimsalon.es/tratamiento-coloracion-con-barros-naturales/",
+      "offers": {
+        "@type": "Offer",
+        "priceCurrency": "EUR",
+        "price": "80",
+        "priceSpecification": {
+          "@type": "PriceSpecification",
+          "minPrice": "80",
+          "priceCurrency": "EUR"
+        },
+        "url": "https://dimsalon.es/tratamiento-coloracion-con-barros-naturales/"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://dimsalon.es/tratamiento-coloracion-con-barros-naturales/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "¿Los barros cubren las canas?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Los barros camuflan e integran las canas: las envuelven y las convierten en reflejos naturales que se funden con tu color, sin efecto casco. No ofrecen una cobertura opaca al 100 %. Si buscas una cobertura total, te recomendaremos DIM Néctar Color, nuestra coloración orgánica sin amoniaco."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cuánto dura la coloración con barros?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Entre 4 y 6 semanas, según tu cabello y cómo lo laves. El color se va suavizando poco a poco, sin parches ni tonos anaranjados. Para mantenerlo, recomendamos repetir la coloración cada 4 a 6 semanas."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cuánto cuesta la coloración con barros en DIM Salón?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Desde 80 €. El precio final depende del largo y la densidad de tu cabello, y te lo confirmamos en el diagnóstico antes de empezar."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Los barros aclaran el pelo?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Los barros no aclaran: sirven para matizar, oscurecer, aportar reflejos y camuflar canas. Si quieres aclarar tu tono, te orientaremos hacia mechas o iluminaciones."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Puedo ponerme barros si tengo el pelo teñido o con mechas?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "En la mayoría de los casos, sí. En el diagnóstico valoramos el color que llevas y el estado de tu cabello para decidir cómo aplicar los barros y qué resultado puedes esperar."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Son aptos para cueros cabelludos sensibles?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Al no llevar amoniaco, la aplicación es más cómoda para el cuero cabelludo. Aun así, recomendamos hacer una prueba de alergia 48 horas antes, sobre todo si es tu primera vez: los ingredientes naturales también pueden causar reacciones en pieles sensibles."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Puedo hacerme los barros si estoy embarazada o en lactancia?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Muchas clientas eligen los barros porque no llevan amoniaco. Aun así, te recomendamos consultarlo antes con tu ginecólogo o matrona."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Por qué hacerlos en un salón y no en casa?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "El resultado de los barros depende del diagnóstico, la mezcla y la aplicación. En DIM Salón formulamos el tono para tu cabello y tus canas, lo aplicamos sección por sección y controlamos el tiempo de exposición para lograr un color uniforme y natural."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
