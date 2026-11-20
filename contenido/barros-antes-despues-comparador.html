@@ -1,0 +1,75 @@
+<style>
+.dim-cmp-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin:0 auto;max-width:1100px}
+.dim-cmp-item{margin:0;background:#FFFFFF;border:1px solid #DDDDDD;border-top:4px solid #007CBA;border-radius:12px;overflow:hidden}
+.dim-cmp{position:relative;aspect-ratio:3/4;overflow:hidden;user-select:none;touch-action:pan-y;background:#DDDDDD;--pos:50%}
+.dim-cmp img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;pointer-events:none}
+.dim-cmp .dim-cmp-antes{clip-path:inset(0 calc(100% - var(--pos)) 0 0)}
+.dim-cmp-linea{position:absolute;top:0;bottom:0;left:var(--pos);width:3px;margin-left:-1.5px;background:#FFFFFF;pointer-events:none;box-shadow:0 0 6px rgba(0,0,0,.35)}
+.dim-cmp-linea::after{content:"\2039 \203A";position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:40px;height:40px;border-radius:50%;background:#007CBA;color:#FFFFFF;font-size:20px;font-weight:700;line-height:38px;text-align:center;border:2px solid #FFFFFF}
+.dim-cmp-et{position:absolute;top:10px;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;padding:3px 8px;border-radius:4px;color:#FFFFFF;pointer-events:none}
+.dim-cmp-et.a{left:10px;background:#000000}
+.dim-cmp-et.d{right:10px;background:#007CBA}
+.dim-cmp input{position:absolute;inset:0;width:100%;height:100%;margin:0;opacity:0;cursor:ew-resize}
+.dim-cmp-item figcaption{padding:14px 16px;font-size:15px;line-height:1.5;color:#000000;text-align:center}
+@media (max-width:1024px){.dim-cmp-grid{grid-template-columns:repeat(2,1fr);gap:16px}}
+@media (max-width:767px){.dim-cmp-grid{grid-template-columns:1fr;gap:16px}}
+</style>
+
+<div class="dim-cmp-grid">
+  <figure class="dim-cmp-item">
+    <div class="dim-cmp">
+      <img src="https://dimsalon.es/wp-content/uploads/2026/11/coloracion-canas-barros-despues-1.webp" alt="Después de la coloración con plantas (barros): canas camufladas con reflejos naturales en DIM Salón Madrid" width="900" height="1200">
+      <img class="dim-cmp-antes" src="https://dimsalon.es/wp-content/uploads/2026/11/coloracion-canas-barros-antes-1.webp" alt="Antes de la coloración con plantas (barros): melena con canas muy visibles" width="900" height="1200">
+      <span class="dim-cmp-linea"></span>
+      <span class="dim-cmp-et a">Antes</span><span class="dim-cmp-et d">Después</span>
+      <input type="range" min="0" max="100" value="50" aria-label="Desliza para comparar antes y después">
+    </div>
+    <figcaption>La cana deja de brillar y se funde en reflejos naturales, sin efecto casco.</figcaption>
+  </figure>
+  <figure class="dim-cmp-item">
+    <div class="dim-cmp">
+      <img src="https://dimsalon.es/wp-content/uploads/2026/11/coloracion-canas-barros-despues-2.webp" alt="Después de la coloración con plantas (barros): canas integradas con color multitonal en DIM Salón Malasaña" width="900" height="1200">
+      <img class="dim-cmp-antes" src="https://dimsalon.es/wp-content/uploads/2026/11/coloracion-canas-barros-antes-2.webp" alt="Antes de la coloración con plantas (barros): raíz con canas" width="900" height="1200">
+      <span class="dim-cmp-linea"></span>
+      <span class="dim-cmp-et a">Antes</span><span class="dim-cmp-et d">Después</span>
+      <input type="range" min="0" max="100" value="50" aria-label="Desliza para comparar antes y después">
+    </div>
+    <figcaption>Raíz con canas camuflada con un color multitonal y lleno de matices.</figcaption>
+  </figure>
+  <figure class="dim-cmp-item">
+    <div class="dim-cmp">
+      <img src="https://dimsalon.es/wp-content/uploads/2026/11/coloracion-canas-barros-despues-3.webp" alt="Después de la coloración con plantas (barros): raíz castaña sin canas visibles en DIM Salón Madrid" width="900" height="1200">
+      <img class="dim-cmp-antes" src="https://dimsalon.es/wp-content/uploads/2026/11/coloracion-canas-barros-antes-3.webp" alt="Antes de la coloración con plantas (barros): raíz castaña con canas visibles" width="900" height="1200">
+      <span class="dim-cmp-linea"></span>
+      <span class="dim-cmp-et a">Antes</span><span class="dim-cmp-et d">Después</span>
+      <input type="range" min="0" max="100" value="50" aria-label="Desliza para comparar antes y después">
+    </div>
+    <figcaption>La raíz con canas se funde en un castaño uniforme y natural.</figcaption>
+  </figure>
+  <figure class="dim-cmp-item">
+    <div class="dim-cmp">
+      <img src="https://dimsalon.es/wp-content/uploads/2026/11/coloracion-canas-barros-despues-4.webp" alt="Después de la coloración con plantas (barros): canas camufladas en moreno intenso con brillo" width="900" height="1200">
+      <img class="dim-cmp-antes" src="https://dimsalon.es/wp-content/uploads/2026/11/coloracion-canas-barros-antes-4.webp" alt="Antes de la coloración con plantas (barros): melena morena rizada con canas" width="900" height="1200">
+      <span class="dim-cmp-linea"></span>
+      <span class="dim-cmp-et a">Antes</span><span class="dim-cmp-et d">Después</span>
+      <input type="range" min="0" max="100" value="50" aria-label="Desliza para comparar antes y después">
+    </div>
+    <figcaption>Canas camufladas en un moreno intenso, con brillo y matices.</figcaption>
+  </figure>
+  <figure class="dim-cmp-item">
+    <div class="dim-cmp">
+      <img src="https://dimsalon.es/wp-content/uploads/2026/11/coloracion-canas-barros-despues-5.webp" alt="Después de la coloración con plantas (barros): raíz con canas integrada en DIM Salón Malasaña" width="900" height="1200">
+      <img class="dim-cmp-antes" src="https://dimsalon.es/wp-content/uploads/2026/11/coloracion-canas-barros-antes-5.webp" alt="Antes de la coloración con plantas (barros): raíz con canas en melena castaña" width="900" height="1200">
+      <span class="dim-cmp-linea"></span>
+      <span class="dim-cmp-et a">Antes</span><span class="dim-cmp-et d">Después</span>
+      <input type="range" min="0" max="100" value="50" aria-label="Desliza para comparar antes y después">
+    </div>
+    <figcaption>Raíz con canas integrada en el castaño, sin línea marcada.</figcaption>
+  </figure>
+</div>
+
+<script>
+document.querySelectorAll('.dim-cmp input').forEach(function(r){
+  r.addEventListener('input',function(){ r.parentNode.style.setProperty('--pos', r.value + '%'); });
+});
+</script>
